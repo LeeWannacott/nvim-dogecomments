@@ -26,15 +26,11 @@ if type(string.len(comment_syntax)) ~= nil then
     comment_syn_len = string.len(comment_syntax)
 end
 --
-function trim_whitespace(string)
-    return string:match'^%s*(.*)'
-end
-  
 function comment_line()
     get_line = api.nvim_get_current_line() 
-    first_non_space_char = (string.len(get_line) - string.len(trim_whitespace(get_line)))+1
+    first_non_space_char = string.find(get_line, '%S')
     leading_space = string.rep(" ",first_non_space_char-1)
-    comment_exists = trim_whitespace(get_line.sub(get_line,first_non_space_char,first_non_space_char+1))
+    comment_exists = get_line.sub(get_line,first_non_space_char,first_non_space_char+1)
 
     space_after_comment = " "
     space_after_comment_len = string.len(space_after_comment)
