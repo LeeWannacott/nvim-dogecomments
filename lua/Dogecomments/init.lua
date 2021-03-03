@@ -11,6 +11,7 @@ file = {}
 file["python"] = "#"
 file["javascript"] = "//"
 file["lua"] = "--"
+file["vim"] = "\""
 file["text"] = "**"
 
 filetype = vim.bo.filetype
@@ -29,8 +30,13 @@ end
 function comment_line()
     get_line = api.nvim_get_current_line() 
     first_non_space_char = string.find(get_line, '%S')
+    if first_non_space_char == nil then
+        first_non_space_char = 0
+    end
     leading_space = string.rep(" ",first_non_space_char-1)
     comment_marker_exists = get_line.sub(get_line,first_non_space_char,first_non_space_char + length_of_comment_marker-1)
+    print(comment_marker)
+    print(comment_marker_exists)
 
     space_after_comment = " "
     space_after_comment_len = string.len(space_after_comment)
