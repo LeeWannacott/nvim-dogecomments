@@ -3,7 +3,7 @@ Warning: Neovim plugin under development.
 Help Doge get to the moon by letting Doge comment out your code. Written in moon language.
 
 Install instructions:
-`Plug 'leewannacott/neovim-Dogecomments'`
+`Plug 'leewannacott/neovim-dogecomments'`
 
 How to use:
 
