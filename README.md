@@ -7,5 +7,8 @@ Install instructions:
 
 How to use:
 
-Comment out a single line:
-Currently bound to `<leader> + c.`
+" Current Keymappings to call different functions.
+noremap <leader>cl :call Comment_line() <CR>
+noremap <leader>cc :call Comment_on_cursor() <CR>
+noremap <leader>cd :call Comment_todo() <CR>
+noremap <leader>c$ :call Comment_end_of_line() <CR>
