@@ -15,8 +15,6 @@ current_vim_mode = api.nvim_get_mode().mode -- .blocking: Do we need to check if
 
         leading_space = string.rep(" ",first_non_space_char-1)
         comment_marker_placed = get_line.sub(get_line,first_non_space_char,first_non_space_char + length_of_comment_marker-1)
-        space_after_comment = " "
-        space_after_comment_length = string.len(space_after_comment)
 
         if comment_marker_placed ~= comment_marker then
             set_line = api.nvim_set_current_line(leading_space .. comment_marker .. space_after_comment .. get_line.sub(get_line,first_non_space_char))

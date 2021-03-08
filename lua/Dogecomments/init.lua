@@ -31,6 +31,9 @@ if type(string.len(comment_marker)) ~= nil then
 end
 --
 
+space_after_comment = " "
+space_after_comment_length = string.len(space_after_comment)
+
 function dogecomments()
 end
 
