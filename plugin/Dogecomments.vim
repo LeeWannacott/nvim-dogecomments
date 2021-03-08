@@ -12,9 +12,21 @@ fun! Comment_on_cursor()
     lua require("Dogecomments/comment_on_cursor").comment_on_cursor()
 endfun
 
+fun! Comment_todo()
+    lua for k in pairs(package.loaded) do if k:match("^Dogecomments") then package.loaded[k] = nill end end
+    lua require("Dogecomments/comment_todo").comment_todo()
+endfun
+
+fun! Comment_end_of_line()
+    lua for k in pairs(package.loaded) do if k:match("^Dogecomments") then package.loaded[k] = nill end end
+    lua require("Dogecomments/comment_eol").comment_eol()
+endfun
+
 " Keymappings to call different functions.
-noremap <leader>c :call Comment_line() <CR>
-noremap <leader>q :call Comment_on_cursor() <CR>
+noremap <leader>cl :call Comment_line() <CR>
+noremap <leader>cc :call Comment_on_cursor() <CR>
+noremap <leader>cd :call Comment_todo() <CR>
+noremap <leader>c$ :call Comment_end_of_line() <CR>
 
 
 
