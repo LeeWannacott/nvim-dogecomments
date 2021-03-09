@@ -52,7 +52,7 @@ return dogecomments
 --  [x] Single line comment when in normal mode
 --  [x] Be able to place multiple line comments ,or multiline comments in visual mode. -- seems to do this by default o_0
 -- https://vi.stackexchange.com/questions/17606/vmap-and-visual-block-how-do-i-write-a-function-to-operate-once-for-the-entire
---  [] Be able to place comment on cursor
+--  [x] Be able to place comment on cursor
 --  [] Be able to place comment in visual block mode
 --  [] Fix bug: If the user has existing comment that does not have space after it. The letter after the comment will be deleted.
 --  [] Put alert user needs at least Neovim version -0.5

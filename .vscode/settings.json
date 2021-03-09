@@ -2,5 +2,6 @@
     "Lua.diagnostics.globals": [
         "vim",
         "current_vim_mode"
-    ]
+    ],
+    "python.pythonPath": "/bin/python3"
 }
