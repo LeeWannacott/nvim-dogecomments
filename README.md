@@ -11,9 +11,11 @@ Current Keymappings to call different functions.
 ```lua
 noremap <leader>cl :call Comment_line() <CR>
 
+noremap <leader>cL :call Comment_end_of_line() <CR>
+
 noremap <leader>cc :call Comment_on_cursor() <CR>
 
-noremap <leader>cd :call Comment_todo() <CR>
+noremap <leader>ct :call Comment_todo() <CR>
 
-noremap <leader>c$ :call Comment_end_of_line() <CR>
+noremap <leader>cu :call Comment_remove() <CR>
 ```

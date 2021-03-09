@@ -37,12 +37,12 @@ space_after_comment_length = string.len(space_after_comment)
 function dogecomments()
 end
 
-local dogecomments = 
+local dogecomments =
 {
     dogecomments = dogecomments
 }
 
-return dogecomments 
+return dogecomments
 
 -- TODO:s
 --  [x] Place comments with the indentation level.
