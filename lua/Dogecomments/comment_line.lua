@@ -14,12 +14,18 @@ current_vim_mode = api.nvim_get_mode().mode -- .blocking: Do we need to check if
         end
 
         leading_space = string.rep(" ",first_non_space_char-1)
-        comment_marker_placed = get_line.sub(get_line,first_non_space_char,first_non_space_char + length_of_comment_marker-1)
+        if_comment_marker = get_line.sub(get_line,first_non_space_char,first_non_space_char + length_of_comment_marker-1)
+        if_comment_marker_with_space = get_line.sub(get_line,first_non_space_char,first_non_space_char + length_of_comment_marker)
 
-        if comment_marker_placed ~= comment_marker then
+        if if_comment_marker ~= comment_marker then
             set_line = api.nvim_set_current_line(leading_space .. comment_marker .. space_after_comment .. get_line.sub(get_line,first_non_space_char))
-        elseif comment_marker_placed == comment_marker  then
+
+        elseif if_comment_marker_with_space == comment_marker .. space_after_comment then
             set_line = api.nvim_set_current_line(leading_space .. get_line.sub(get_line, first_non_space_char + length_of_comment_marker + space_after_comment_length))
+
+        elseif if_comment_marker_with_space ~= comment_marker then
+            set_line = api.nvim_set_current_line(leading_space .. get_line.sub(get_line, first_non_space_char + length_of_comment_marker))
+        
         end
 
     end
