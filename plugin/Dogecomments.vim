@@ -37,7 +37,7 @@ noremap <leader>cl :call Comment_line() <CR>
 noremap <leader>cc :call Comment_on_cursor() <CR>
 noremap <leader>ct :call Comment_todo() <CR>
 noremap <leader>cL :call Comment_end_of_line() <CR>
-noremap <leader>cu :call Comment_remove() <CR>
+noremap <leader>cd :call Comment_remove() <CR>
 noremap <leader>cp :call Comment_doge() <CR>
 
 

@@ -2,8 +2,8 @@
 require("Dogecomments/init")
 
 local function comment_line()
-    print "Comment the line"
-current_vim_mode = api.nvim_get_mode().mode -- .blocking: Do we need to check if blocking is false in addition to 'n' mode?
+    
+    current_vim_mode = api.nvim_get_mode().mode -- .blocking: Do we need to check if blocking is false in addition to 'n' mode?
 
     if current_vim_mode:match('n') then
         get_line = api.nvim_get_current_line() 
@@ -27,7 +27,6 @@ current_vim_mode = api.nvim_get_mode().mode -- .blocking: Do we need to check if
             set_line = api.nvim_set_current_line(leading_space .. get_line.sub(get_line, first_non_space_char + length_of_comment_marker))
         
         end
-
     end
 end
 

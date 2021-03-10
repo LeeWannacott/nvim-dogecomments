@@ -2,6 +2,7 @@
 require("Dogecomments/init")
 
 function comment_doge()
+
     -- see if the file exists
     function file_exists(file)
         local f = io.open(file, "rb")
@@ -23,7 +24,7 @@ function comment_doge()
 
     -- tests the functions above
     -- TODO: change to get present working directory and then after ascii text file, or to get from github.
-    local file = '/home/lee/Desktop/neovim-dogecomments/lua/Dogecomments/Doge.txt'
+    local file = "https://raw.githubusercontent.com/LeeWannacott/nvim-dogecomments/master/lua/Dogecomments/Doge.txt"
     local lines = lines_from(file)
 
     -- paste doge

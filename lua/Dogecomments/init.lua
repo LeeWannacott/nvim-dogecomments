@@ -57,6 +57,6 @@ return dogecomments
 -- https://vi.stackexchange.com/questions/17606/vmap-and-visual-block-how-do-i-write-a-function-to-operate-once-for-the-entire
 --  [x] Be able to place comment on cursor
 --  [] Be able to place comment in visual block mode
---  [] Fix bug: If the user has existing comment that does not have space after it. The letter after the comment will be deleted.
+--  [x] Fix bug: If the user has existing comment that does not have space after it. The letter after the comment will be deleted.
 --  [] Put alert user needs at least Neovim version -0.5
 --  [x] Restructure components of program to not all be in init.lua. Seperate function for different functionality.
