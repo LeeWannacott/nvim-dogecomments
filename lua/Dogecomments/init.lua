@@ -15,7 +15,7 @@ file["javascript"] = "//"
 file["lua"] = "--"
 file["vim"] = "\""
 file["c"] = "//"
-file["c++"]= "//"
+file["cpp"]= "//"
 file["text"] = "*"
 
 
