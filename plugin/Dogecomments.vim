@@ -27,12 +27,18 @@ fun! Comment_remove()
     lua require("Dogecomments/comment_remove").comment_remove()
 endfun
 
+fun! Comment_doge()
+    lua for k in pairs(package.loaded) do if k:match("^Dogecomments") then package.loaded[k] = nill end end
+    lua require("Dogecomments/comment_doge").comment_doge()
+endfun
+
 " Keymappings to call different functions.
 noremap <leader>cl :call Comment_line() <CR>
 noremap <leader>cc :call Comment_on_cursor() <CR>
 noremap <leader>ct :call Comment_todo() <CR>
 noremap <leader>cL :call Comment_end_of_line() <CR>
 noremap <leader>cu :call Comment_remove() <CR>
+noremap <leader>cp :call Comment_doge() <CR>
 
 
 
