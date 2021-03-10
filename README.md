@@ -22,4 +22,5 @@ noremap <leader>cp :call Comment_doge() <CR>
 ```
 
 Example how to install(fork and clone first) for development on this repo:
-`Plug '/home/lee/Desktop/nvim-dogecomments' 
+
+`Plug '/home/lee/Desktop/nvim-dogecomments'`
