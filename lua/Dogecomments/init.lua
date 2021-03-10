@@ -14,7 +14,9 @@ file["python"] = "#"
 file["javascript"] = "//"
 file["lua"] = "--"
 file["vim"] = "\""
+file["C"] = "::"
 file["text"] = "*"
+
 
 
 filetype = vim.bo.filetype
