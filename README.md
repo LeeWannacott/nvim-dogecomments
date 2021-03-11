@@ -8,17 +8,17 @@ How to use:
 
 Current Keymappings to call different functions.
 ```lua
-noremap <leader>cl :call Comment_line() <CR>
+noremap <leader>cl :call Comment_line() <CR> -- Comment out a single line or multiple using count or VL mode.
 
-noremap <leader>cL :call Comment_end_of_line() <CR>
+noremap <leader>cL :call Comment_end_of_line() <CR> -- Places comment at end of line and enters insert mode.
 
-noremap <leader>cc :call Comment_on_cursor() <CR>
+noremap <leader>cc :call Comment_on_cursor() <CR> -- Places a comment on the cursor mark position.
 
-noremap <leader>ct :call Comment_todo() <CR>
+noremap <leader>ct :call Comment_todo() <CR> -- Places a TODO comment.
 
-noremap <leader>cu :call Comment_remove() <CR>
+noremap <leader>cd :call Comment_remove() <CR> -- Deletes comments placed at start of lines.
 
-noremap <leader>cp :call Comment_doge() <CR>
+noremap <leader>cp :call Comment_doge() <CR> -- Prints ascii Doge.
 ```
 
 Example how to install(fork and clone first) for development on this repo:
