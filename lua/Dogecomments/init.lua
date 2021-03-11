@@ -14,16 +14,7 @@ function log_telemetry(telemetry_string)
     file:close()
 end
 
--- file types table -- Comment markers for single line comments.
-local file = {}
-file["python"] = "#"
-file["javascript"] = "//"
-file["lua"] = "--"
-file["vim"] = "\""
-file["c"] = "//"
-file["cpp"]= "//"
-file["text"] = "*"
-
+require("Dogecomments/filetypes") 
 
 filetype = vim.bo.filetype
 -- print(filetype)
@@ -41,6 +32,7 @@ end
 
 space_after_comment = " "
 space_after_comment_length = string.len(space_after_comment)
+
 
 function dogecomments()
 end
