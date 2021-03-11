@@ -1,12 +1,18 @@
 -- Dogecomments - Lee Wannacott - 2021
 
--- api commands reference:
--- local get_cursor_line_number = api.nvim_win_get_cursor(0)[1]
--- local set_line = api.nvim_set_current_line("hello")
--- local get_line = api.nvim_get_current_line() 
--- nvim_put({lines}, {type}, {after}, {follow}) *nvim_put()* Puts text at cursor, in any mode.
+if vim.fn.has('nvim-0.5') == 0 then
+    print("dogecomments requires nvim version >=0.5")
+end
 
 api = vim.api -- Shorten calling of the api.
+
+telemetry = true
+
+function log_telemetry(telemetry_string)
+    local file = io.open("telemetry.txt", "a+")
+    file:write(telemetry_string,"\n")
+    file:close()
+end
 
 -- file types table -- Comment markers for single line comments.
 local file = {}
@@ -17,7 +23,6 @@ file["vim"] = "\""
 file["c"] = "//"
 file["cpp"]= "//"
 file["text"] = "*"
-
 
 
 filetype = vim.bo.filetype
@@ -58,5 +63,5 @@ return dogecomments
 --  [x] Be able to place comment on cursor
 --  [] Be able to place comment in visual block mode
 --  [x] Fix bug: If the user has existing comment that does not have space after it. The letter after the comment will be deleted.
---  [] Put alert user needs at least Neovim version -0.5
+--  [x] Put alert user needs at least Neovim version -0.5
 --  [x] Restructure components of program to not all be in init.lua. Seperate function for different functionality.

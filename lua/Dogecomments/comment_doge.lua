@@ -33,9 +33,13 @@ function comment_doge()
         -- paste doge
         api.nvim_put(lines,'l',true,true)
     end
-    print_ascii_doge()
-end
 
+    print_ascii_doge()
+
+    if telemetry == true then
+        log_telemetry("commented_doge")
+    end
+end
 return{
     comment_doge = comment_doge,
 }

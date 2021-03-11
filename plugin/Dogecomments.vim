@@ -1,7 +1,4 @@
 
-echo 'Dogecomments lifting off'
-
-
 fun! Comment_line()
     lua for k in pairs(package.loaded) do if k:match("^Dogecomments") then package.loaded[k] = nill end end
     lua require("Dogecomments/comment_line").comment_line()

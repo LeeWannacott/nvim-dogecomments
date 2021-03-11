@@ -17,13 +17,16 @@ local function comment_line()
         if_comment_marker = get_line.sub(get_line,first_non_space_char,first_non_space_char + length_of_comment_marker-1)
         if_comment_marker_with_space = get_line.sub(get_line,first_non_space_char,first_non_space_char + length_of_comment_marker)
 
-        if if_comment_marker ~= comment_marker then
+        if if_comment_marker ~= comment_marker then -- if no comment currently.
             set_line = api.nvim_set_current_line(leading_space .. comment_marker .. space_after_comment .. get_line.sub(get_line,first_non_space_char))
+            if telemetry == true then
+                log_telemetry("commented_line")
+            end
 
-        elseif if_comment_marker_with_space == comment_marker .. space_after_comment then
+        elseif if_comment_marker_with_space == comment_marker .. space_after_comment then -- if comment: // text.
             set_line = api.nvim_set_current_line(leading_space .. get_line.sub(get_line, first_non_space_char + length_of_comment_marker + space_after_comment_length))
 
-        elseif if_comment_marker_with_space ~= comment_marker then
+        elseif if_comment_marker_with_space ~= comment_marker then -- if comment: //text
             set_line = api.nvim_set_current_line(leading_space .. get_line.sub(get_line, first_non_space_char + length_of_comment_marker))
         
         end
