@@ -1,8 +1,8 @@
-Description: Help get :dog: to the :first_quarter_moon_with_face: by commenting out your code. 
+# Description: Help get :dog: to the :first_quarter_moon_with_face: by commenting out your code. 
 
 Install: `Plug 'leewannacott/nvim-dogecomments'`
 
-Current Keymappings to call different functions.
+## Current Keymappings to call different functions.
 ```lua
 noremap <leader>cl :call Comment_line() <CR> -- Comment out a single line or multiple using count or VL mode.
 
@@ -17,7 +17,7 @@ noremap <leader>cd :call Comment_remove() <CR> -- Deletes comments placed at sta
 noremap <leader>cp :call Comment_doge() <CR> -- Prints ascii Doge.
 ```
 
-Example pathway for development on this repository:
+# Development on this repository:
 
 `Plug '/home/user/Desktop/nvim-dogecomments'`
 
