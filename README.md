@@ -1,4 +1,4 @@
-Description: Help Doge get to the moon by letting Doge comment out your code. Written in moon language.
+Description: Help Doge to the moon by commenting out your code. Written in moon language.
 
 Install: `Plug 'leewannacott/nvim-dogecomments'`
 
