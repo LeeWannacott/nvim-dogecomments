@@ -22,5 +22,4 @@ Example pathway for development on this repository:
 `Plug '/home/user/Desktop/nvim-dogecomments'`
 
 TODO: 
-
 - [ ] Deploy server to AWS as EC2 instance to show global amount of lines of code commented out by users of the plugin.
