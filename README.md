@@ -1,4 +1,4 @@
-Description: Help get :dog: to the :first_quarter_moon_with_face: by commenting out your code. Written in moon language.
+Description: Help get :dog: to the :first_quarter_moon_with_face: by commenting out your code. 
 
 Install: `Plug 'leewannacott/nvim-dogecomments'`
 
