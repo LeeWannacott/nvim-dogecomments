@@ -23,3 +23,4 @@ noremap <leader>cp :call Comment_doge() <CR> -- Prints ascii Doge.
 
 TODO: 
 - [ ] Deploy server to AWS as EC2 instance to show global amount of lines of code commented out by users of the plugin.
+- [ ] Silence commenting commands so don't show up in nvim when using them.
