@@ -1,12 +1,8 @@
-# Nvim plugin under development. 
-
-Description: Help Doge get to the moon by letting Doge comment out your code. Written in moon language.
+## Description: Help get :dog: to the :last_quarter_moon_with_face: by commenting out your code. 
 
 Install: `Plug 'leewannacott/nvim-dogecomments'`
 
-How to use:
-
-Current Keymappings to call different functions.  
+### Current Keymappings to call different functions:
 ```lua
 -- Commands are silenced with <silent>
 noremap <leader>cl :call Comment_line() <CR> -- Comment out a single line or multiple using count or VL mode.
@@ -22,8 +18,10 @@ noremap <leader>cd :call Comment_remove() <CR> -- Deletes comments placed at sta
 noremap <leader>cp :call Comment_doge() <CR> -- Prints ascii Doge.
 ```
 
-Help my coding language isn't supported: #1 .Feel free to make a PR, or ask me to add it.
+### Development on this repository:
 
-Example how to install(fork and clone first) for development on this repo:
+`Plug '/home/user/Desktop/nvim-dogecomments'`
 
-`Plug '/home/lee/Desktop/nvim-dogecomments'`
+TODO: 
+- [ ] Deploy server to AWS as EC2 instance to show global amount of lines of code commented out by users of the plugin.
+- [ ] Silence commenting commands.
