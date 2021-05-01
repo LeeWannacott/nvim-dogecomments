@@ -6,7 +6,7 @@ end
 
 api = vim.api -- Shorten calling of the api.
 
-telemetry = true
+telemetry = false
 
 function log_telemetry(telemetry_string)
     local file = io.open("telemetry.txt", "a+")
