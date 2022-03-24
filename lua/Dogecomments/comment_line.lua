@@ -6,10 +6,10 @@ local function comment_line()
     current_vim_mode = api.nvim_get_mode().mode -- .blocking: Do we need to check if blocking is false in addition to 'n' mode?
 
     if current_vim_mode:match('n') then
-        get_line = api.nvim_get_current_line() 
+        get_line = api.nvim_get_current_line()
 
         first_non_space_char = string.find(get_line, '%S')
-        if first_non_space_char == nil then 
+        if first_non_space_char == nil then
             first_non_space_char = 0 -- If no whitespace before comment_marker.
         end
 
